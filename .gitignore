@@ -141,3 +141,4 @@ cython_debug/
 *.pyc
 *~
 .DS_Store
+.env
