@@ -21,7 +21,7 @@ WIN = sys.platform.startswith('win')
 if WIN:
     prefix = 'sqlite:///'
 else:
-    prefix = 'sqlite:////'\
+    prefix = 'sqlite:////'
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = prefix + os.path.join(app.root_path, 'data.db')
@@ -67,6 +67,16 @@ def inject_user():
 @app.errorhandler(404)
 def page_not_found(e):
     return render_template('404.html'), 404
+
+
+@app.errorhandler(400)
+def bad_request(e):
+    return render_template('400.html'), 400
+
+
+@app.errorhandler(500)
+def server_error(e):
+    return render_template('500.html'), 500
 
 
 @app.route('/', methods=['GET', 'POST'])
