@@ -3,9 +3,10 @@
 ## 来自  
 本项目来自greyli主页的[《FLASK入门教程》](https://helloflask.com/book/3/)  
 
-## 目标  
-根据书中代码实现一个观影列表的页面，入门FLASK  
+## 项目主页  
+[http://diudiu.pythonanywhere.com/](http://diudiu.pythonanywhere.com/)
 
 ## todo  
-1. 增加评论模块  
-2. 增加readlist，gamelist等页面
+1. 完成watchlist（done.）
+2. 增加评论模块  
+3. 增加readlist，gamelist，aboutme等页面  
