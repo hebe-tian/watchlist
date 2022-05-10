@@ -102,3 +102,8 @@ def settings():
         return redirect(url_for('index'))
 
     return render_template('settings.html')
+
+
+@app.route('/me')
+def me():
+    return render_template('aboutme.html')
